@@ -1,0 +1,53 @@
+<App>
+<div className="app">
+
+	<Header>	
+
+		left part
+			img
+			searchicon
+			input
+
+		center part
+
+		right part	
+
+	<Header/>
+	
+	<div className="app_body">	// remaining all the thing is inside it
+
+		<Sidebar>		// left side
+			<SidebarRow/>
+			<SidebarRow/>
+			    ..
+		<Sidebar/>
+
+		<feed>			// center
+			
+			<StoryReel>
+				<Story/>
+				<Story/>
+				  ..
+			<StoryReel/>
+
+			<MessageSender>			
+				top part
+				bottom part
+			<MessageSender/>
+	
+			<Post/>
+			<Post/>		// display 3 post
+			<Post/>
+
+		<feed/>
+
+		<widgest>		// right side
+
+			<iframe/>	// display another webpage inside our app
+		
+		<widgest/>
+
+	</div>
+
+</div>	
+<App/>

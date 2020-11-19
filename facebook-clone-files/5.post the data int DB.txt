@@ -1,0 +1,33 @@
+import db from "../firebase" 		// from our project
+import firebase from "firebase"		// from firebase pkg
+
+
+
+function MessageSender() {
+
+    const [{user}, dispatch] = useDataLayerValue();
+
+    const [input, setInput] = useState("");
+    const [imageUrl, setImageUrl] = useState("");
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // save to the DB (firestore)
+        db.collection('posts').add({
+            profilePic: user.photoURL,
+            username: user.displayName,
+            message: input,
+            image: imageUrl,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        })
+
+        // after form submission reset the input field
+        setInput("");
+        setImageUrl("");
+    }
+
+    return(
+	........
+    );
+}

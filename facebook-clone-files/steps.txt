@@ -1,0 +1,20 @@
+after registering project in firebase console
+
+step:1:
+	.go to firebase current project setting.
+		.click on 'config' in "firebase sdk snippet"
+		.now copy the code & create 'firebase.js' file & paste inside it (because we need this later)
+
+
+step n-2	// see component tree for this
+step n-1
+
+step n
+	see video for how to connect to the frebase firestore for better understanding
+
+	npm install firebase
+
+	set firestore in current app
+		create db
+		now go to authentication
+			go to signin method & enable Google

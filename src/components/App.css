@@ -1,0 +1,16 @@
+.app {
+  background-color: #f1f2f5;
+}
+
+.app_body {
+  display: flex;
+  overflow-x: scroll;
+}
+
+.app_body::-webkit-scrollbar {
+  display: none;
+}
+
+.app_body {
+  scrollbar-width: none;
+}

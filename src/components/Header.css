@@ -1,0 +1,103 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  /*position: sticky => stick to the top:0 & never overridden by any component(z-index) */
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 100;
+  box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 0.75);
+  overflow-x: scroll;
+}
+
+/* hide scrollbar for chrome,safari,opera */
+.header::-webkit-scrollbar {
+  display: none;
+}
+
+/* hide scrollbar for firefox */
+.header {
+  scrollbar-width: none;
+}
+
+.header_left {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-evenly; */
+}
+
+.header_left > img {
+  height: 40px;
+}
+
+/* to align SearchIcon & Input at center */
+.header_input {
+  display: flex;
+  align-items: center;
+  background-color: #eff2f5;
+  padding: 10px;
+  margin-left: 10px;
+  border-radius: 999px;
+}
+
+/* to remove default input border */
+.header_input > input {
+  border: none;
+  background-color: transparent;
+  outline-width: 0;
+}
+
+.header_middle {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+/* each header_option is flex-box */
+.header_option {
+  /* padding: 20px; */
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  cursor: pointer;
+}
+
+.header_option:hover {
+  background-color: #eff2f5;
+  border-radius: 10px;
+  /* align-items: center; */
+  /* padding: 0 30px; */
+  /* border-bottom: none; */
+}
+
+.header_option > .MuiSvgIcon-root {
+  color: gray;
+}
+
+.header_option:hover > .MuiSvgIcon-root {
+  color: #2e81f4;
+}
+
+/* change the active icon color */
+.header_option--active > .MuiSvgIcon-root {
+  color: #2e81f4;
+}
+
+/* display border at bottom of active container */
+.header_option--active {
+  border-bottom: 4px solid #2e81f4;
+}
+
+.header_right {
+  display: flex;
+}
+
+.header_info {
+  display: flex;
+  align-items: center;
+}
+
+.header_info > h4 {
+  margin-left: 10px;
+}

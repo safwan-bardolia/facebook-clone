@@ -1,0 +1,6 @@
+now we want to use 'user' info inside multiple component.
+
+so either we can use Redux/React Context APi
+
+.now we push 'user' inside DataLayer
+ so this 'user' is accessible to all the component inside datalayer & in all of its nested component

@@ -1,0 +1,23 @@
+import db from "../firebase"
+
+    // local variable to store DB value
+    const [posts, setPosts] = useState([]);
+
+    useEffect(()=>{
+        // onSnapshot : means anything update, delete or changes in collection it gives you updated DB
+        db.collection("posts").onSnapshot(snapshot=>{
+            // once we get snapshot update the state
+            // snapshot.docs gives you array of docs, so map through each doc
+            setPosts(snapshot.docs.map(doc=>{
+                // for each row return custome object
+                return {id: doc.id, data: doc.data()}
+            }))
+        })
+
+    },[])   //means run only when component initially render
+
+
+// we order the post based on time
+
+        db.collection("posts").orderBy('timestamp', 'desc')
+        .onSnapshot(snapshot=>{

@@ -1,0 +1,10 @@
+tech used:
+
+React+React Hooks
+React context API -> REDUX pattern
+MaterialUI
+flexbox
+firebase's firestore realtimee DB
+firbase hosting
+firebase google authentication (full login)
+React flip move (animation)
